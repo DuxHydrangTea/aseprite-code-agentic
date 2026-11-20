@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aseprite-codemode"
+version = "0.1.0"
+description = "Agentic Code Execution (Code Mode) MCP wrapper for diivi/aseprite-mcp"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.6.0,<2",
+    "pillow>=10.1.0",
+    "python-dotenv>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.25.0",
+]
+
+[project.scripts]
+aseprite-codemode = "aseprite_codemode.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aseprite_codemode"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+vendor/aseprite-mcp/
+workspace/
+*.aseprite
+*.png
+*.gif
+!/.agents/skills/aseprite-pixel-art/assets/*.aseprite
+!/.agents/skills/aseprite-pixel-art/assets/*.png
+!/.agents/skills/aseprite-pixel-art/assets/*.gif
+dist/
+build/
+*.egg-info/

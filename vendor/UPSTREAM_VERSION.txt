@@ -1,0 +1,1 @@
+﻿https://github.com/diivi/aseprite-mcp @ 4bcdb6f5932116bbdbd1b7d3fcc1e8f965f7657a
